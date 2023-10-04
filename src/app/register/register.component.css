@@ -1,0 +1,14 @@
+body{
+    background-image: url('/assets/img/plato_vegano_registro.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+   
+}
+
+.color{
+    background-color: #7777779d;
+    color: white;
+}

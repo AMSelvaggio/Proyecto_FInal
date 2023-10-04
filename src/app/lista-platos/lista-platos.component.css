@@ -1,0 +1,22 @@
+body{
+    background-color: blanchedalmond;
+}
+
+
+
+.color{
+    background-color:#77777754 ;
+}
+
+
+@media (max-width: 768px) {
+   
+    td {
+        display: block;
+        width: 100%;
+    }
+
+    th {
+        display: none;
+    }
+}

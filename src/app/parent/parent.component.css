@@ -1,0 +1,41 @@
+body, html {
+    margin: 0;
+    height: 100%;
+
+}
+
+body{
+    background-image: url('/assets/img/colmnas_datos.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
+.body-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 600px; 
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+.color{
+    background-color: #77777794;
+    color: white;
+}

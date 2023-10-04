@@ -1,0 +1,61 @@
+body, html {
+    margin: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+}
+
+body{
+
+    background-image: url('/assets/img/hummus_login.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    padding: 20px;
+    border-radius: 8px; 
+    width: 100%;
+    max-width: 320px; 
+}
+
+button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+
+    /* Hacer que el botón cambie ligeramente de color al pasar el mouse sobre él */
+    &:hover {
+        background-color: #0056b3;
+    }
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.color{
+    background-color: #7777777f;
+    color: white;
+}

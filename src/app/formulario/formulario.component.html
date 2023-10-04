@@ -1,0 +1,43 @@
+<body>
+  
+
+
+
+
+<div class="container color shadow">
+    <h2>Añadir Plato</h2>
+    
+    <form [formGroup]="formulario" (ngSubmit)="submit()">
+      
+      <div class="form-group">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" class="form-control" formControlName="name">
+      </div>
+
+      <div class="form-group">
+        <label for="horario">Horario:</label>
+        <select id="horario" class="form-control" formControlName="horario">
+            <option value="almuerzo">Almuerzo</option>
+            <option value="comida">Comida</option>
+            <option value="cena">Cena</option>
+        </select>
+    </div>
+      <div class="form-group">
+        <label for="vegetariano">Vegetariano:</label>
+        <input type="checkbox" id="vegetariano" class="form-check-input" formControlName="vegetariano">
+      </div>
+  
+      <div class="form-group">
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" class="form-control" rows="3" formControlName="descripcion"></textarea>
+      </div>
+     
+      
+      <button type="submit" class="btn btn-primary mb-3">Guardar</button>
+    </form>
+
+</div>
+
+
+<app-lista-platos></app-lista-platos>
+</body>

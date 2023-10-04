@@ -1,0 +1,24 @@
+<body>
+  <div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="container shadow color">
+
+      
+      <strong>Datos del profesional </strong>
+
+      <div class="details mt-3">
+        <p>Nombre: Álvaro Molina Selvaggio</p>
+        <p class="mb-2">Titulación: Dietista</p>
+        <p class="mb-2">Centro de estudios: ETP Xavier</p>
+        <p class="mb-2">Contacto: amsbcn@gmail.com</p>
+        <p>Su dieta personalizada en menos de una semana desde deportivas a veganas.</p>
+      </div>
+      <p>Tarifas:</p>
+      <app-acordion [titulo]="title.titulo" (listEmitter)="handleList($event)"></app-acordion>
+      <div *ngFor="let item of listaRecibida">
+        {{ item }}
+      </div>
+
+    </div>
+  </div>
+  <app-acordion [frases]="frases"></app-acordion>
+</body>

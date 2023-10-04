@@ -1,0 +1,22 @@
+<body>
+ 
+  <div class="d-flex justify-content-center align-items-center vh-100">
+      <div class="container shadow color" style="max-width: 400px;">
+          <div class="mb-3 text-center">
+              <label class="form-check-label">
+                  <input class="form-check-input" type="checkbox" [(ngModel)]="onlyVegetarian"> Sólo vegetariano
+              </label>
+          </div>
+
+          <div class="mb-3 no-copy" [innerHTML]="menu.contenido"></div>
+
+          <div class="d-grid gap-2 mb-3"> 
+              <button class="btn btn-primary btn-sm" (click)="generateRandomMenu()">Generar Menú Aleatorio</button>
+                                       
+          </div>
+      </div>
+  </div>
+</body>
+
+
+<body>

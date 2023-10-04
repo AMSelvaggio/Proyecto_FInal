@@ -1,0 +1,70 @@
+ <body>
+    <div class="container mt-5">
+
+        <h3 class="text-center">Lista de los platos disponibles</h3>
+
+        <div *ngIf="platos && platos.length">
+
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Horario</th>
+                            <th>Vegetariano</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let plato of platos">
+                            <td style="border: 1px solid black; padding: 0.5rem;">{{ plato.name }}</td>
+                            <td style="border: 1px solid black; padding: 0.5rem;">{{ plato.descripcion }}</td>
+                            <td style="border: 1px solid black; padding: 0.5rem;" >{{ plato.horario }}</td>
+                            <td style="border: 1px solid black; padding: 0.5rem;">{{ plato.vegetariano ? 'Sí' : 'No' }}</td>
+                            <td>
+                                <div class="d-flex justify-content-between" style="border: 1px solid black; padding: 0.5rem;">
+                                    <button class="btn btn-primary" (click)="openUpdatePanel(plato)"><i class="fa fa-arrow-up"></i>Actualizar</button>
+                                    <button class="btn btn-danger mr-2" (click)="borrarPlato(plato)">  <i class="fa fa-trash"></i>Borrar</button>
+                               </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div *ngIf="selectedDish" class="mt-4">
+                <h3 class="text-center">Actualizar Plato</h3>
+                <form>
+                    <div class="form-group">
+                        <label>Nombre:</label>
+                        <input [(ngModel)]="selectedDish.name" name="Nombre" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Descripción:</label>
+                        <input [(ngModel)]="selectedDish.descripcion" name="Descripcion" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Horario:</label>
+                        <select [(ngModel)]="selectedDish.horario" name="Horario" class="form-control">
+                            <option value="almuerzo">Almuerzo</option>
+                            <option value="comida">Comida</option>
+                            <option value="cena">Cena</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" [(ngModel)]="selectedDish.vegetariano" name="Vegetariano">
+                        <label class="form-check-label">Vegetariano</label>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <button class="btn btn-success" (click)="saveUpdatedDish()">Guardar Cambios</button>
+                        <button class="btn btn-secondary" (click)="cancelUpdate()">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+</body>

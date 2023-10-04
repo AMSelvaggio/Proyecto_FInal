@@ -1,0 +1,22 @@
+body{
+
+    background-image: url('/assets/img/emptybar_menu.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
+.color{
+    background-color: #777777b1;
+    color: white;
+}
+
+
+.no-copy {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
